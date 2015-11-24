@@ -1,0 +1,8 @@
+Tue, 24 Nov 2015 06:34:27 +0100
+README.rdoc	Tue, 24 Nov 2015 04:47:34 +0100
+app/controllers/application_controller.rb	Tue, 24 Nov 2015 04:47:34 +0100
+app/helpers/application_helper.rb	Tue, 24 Nov 2015 04:47:34 +0100
+app/models/company.rb	Tue, 24 Nov 2015 05:31:38 +0100
+app/models/project.rb	Tue, 24 Nov 2015 05:54:30 +0100
+app/models/user.rb	Tue, 24 Nov 2015 06:00:48 +0100
+app/models/work.rb	Tue, 24 Nov 2015 06:02:06 +0100
