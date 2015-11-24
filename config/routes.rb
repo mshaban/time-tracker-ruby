@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'works/index'
+
+  get 'works/show'
+
   get 'projects/index'
 
   get 'projects/show'
@@ -20,7 +24,7 @@ Rails.application.routes.draw do
 
   resources :companies
   resources :projects
-
+  resources :works
   # Example resource route with options:
   #   resources :products do
   #     member do
