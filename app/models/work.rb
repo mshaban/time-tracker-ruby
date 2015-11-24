@@ -4,12 +4,12 @@ class Work < ActiveRecord::Base
   belongs_to :user
 
   validates :project,
-            :user ,
+            :user,
             :datetimeperformed, presence: true
 
-  validates :hours, numericality: { only_integer: true,
-                                    greater_than: 0,
-                                    less_than: 8 }
+  validates :hours, numericality: {only_integer: true,
+                                   greater_than: 0,
+                                   less_than: 8}
 
   validate :date_is_in_past
 
