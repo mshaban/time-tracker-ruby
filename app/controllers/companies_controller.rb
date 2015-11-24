@@ -1,10 +1,9 @@
 class CompaniesController < ApplicationController
-  def index
+    def index
+        @companies = Company.all
+    end
 
-  end
-
-  def show
-    @companies_id = params[:id]
-    @hello = 'hello'
-  end
+    def show
+        @company = Company.find(params[:id])
+    end
 end
