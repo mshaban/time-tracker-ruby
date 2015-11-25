@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   get 'recentworks/:days' => 'works#index'
+  get 'timetrackerproject/:slug' => 'projects#show'
   resources :companies
   resources :projects
   resources :works

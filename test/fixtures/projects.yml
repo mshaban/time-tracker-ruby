@@ -8,8 +8,9 @@ projectxyz:
   name: Project XYZ
   company: clientinc
   default_rate: 50
-
+  slug: adekfelfa7t
 secondproj:
   name: Second Proj
   company: abcltd
   default_rate: 125
+  slug: adekmenta7t
