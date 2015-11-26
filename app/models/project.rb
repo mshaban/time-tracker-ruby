@@ -9,4 +9,8 @@ class Project < ActiveRecord::Base
                                           greater_than: 50}
   validates :slug, uniqueness: true, presence: true
   scope :lowdefaultrate, -> { where("default_rate < 100") }
+
+  def to_s
+    "#{name} (#{company})"
+  end
 end
