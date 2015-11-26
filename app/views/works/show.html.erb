@@ -5,4 +5,7 @@
 <h1>User: <%= @work.user.fname %></h1>
 <h1>Project: <%= @work.project.name %></h1>
 <h1>hours: <%= @work.hours %></h1>
-<p><%= link_to 'All works', works_path %></p>
+
+<% content_for :aside do %>
+    <% render 'sidebar' %>
+<% end %>

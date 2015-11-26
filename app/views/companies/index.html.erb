@@ -5,3 +5,7 @@
       <li><%= link_to company.name, company %></li>
   <% end %>
 </ul>
+
+<% content_for :aside do %>
+    <% render 'sidebar' %>
+<% end %>
