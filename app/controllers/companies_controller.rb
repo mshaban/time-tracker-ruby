@@ -8,8 +8,8 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.xml {render xml: @company}
-      format.json {render json: @company}
+      format.xml { render xml: @company }
+      format.json { render json: @company }
     end
   end
 end

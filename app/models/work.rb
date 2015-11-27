@@ -1,5 +1,4 @@
 class Work < ActiveRecord::Base
-
   belongs_to :project
   belongs_to :user
 
@@ -7,19 +6,18 @@ class Work < ActiveRecord::Base
             :user,
             :datetimeperformed, presence: true
 
-  validates :hours, numericality: {only_integer: true,
-                                   greater_than: 0,
-                                   less_than: 8}
+  validates :hours, numericality: { only_integer: true,
+                                    greater_than: 0,
+                                    less_than: 8 }
 
   validate :date_is_in_past
 
-  scope :fullday, -> { where("hours >= 8") }
+  scope :fullday, -> { where('hours >= 8') }
   # scope :recent, -> { where ("datetimeperformed > '#{Time.now - 7.days}' ") }
-
 
   def self.recent_days(num_days_ago)
     start_date = Time.now - num_days_ago.to_i.days
-    return Work.where("datetimeperformed > '#{start_date}'")
+    Work.where("datetimeperformed > '#{start_date}'")
   end
 
   def date_is_in_past
