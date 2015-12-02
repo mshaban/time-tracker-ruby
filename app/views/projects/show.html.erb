@@ -1,25 +1,33 @@
 <h1>Projects#show</h1>
 <p>Find me in app/views/projects/show.html.erb</p>
 
-<div class="h1">Name: <%= @project.name %> </div>
-<div class="h1">Company: <%= @project.company.name %></div>
-<div class="h1">Default_rate:  <%= @project.default_rate %></div>
-<div class="h1">slug:  <%= @project.slug %></div>
+<div class="h1">Name:
+  <%= @project.name %>
+</div>
+<div class="h1">Company:
+  <%= @project.company.name %></div>
+<div class="h1">Default_rate:
+  <%= @project.default_rate %></div>
+<div class="h1">slug:
+  <%= @project.slug %></div>
 
-
+<% if @project.works.size > 0 %>
 <table>
   <tbody>
-  <tr>
-    <th>View</th>
-    <th>User</th>
-    <th>Project</th>
-    <th>Date</th>
-    <th>hours</th>
-  </tr>
-  <%= render partial: "works/work", collection: @project.works%>
+    <tr>
+      <th>View</th>
+      <th>User</th>
+      <th>Project</th>
+      <th>Date</th>
+      <th>hours</th>
+    </tr>
+    <%= render partial: "works/work", collection: @project.works%>
   </tbody>
 
 </table>
+<% else %>
+<p>No works to show</p>
+<% end %>
 <% content_for :aside do %>
-    <% render 'sidebar' %>
+<% render 'sidebar' %>
 <% end %>
