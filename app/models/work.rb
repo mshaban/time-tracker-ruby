@@ -2,8 +2,8 @@ class Work < ActiveRecord::Base
   belongs_to :project
   belongs_to :user
 
-  validates :project,
-            :user,
+  validates :project_id,
+            :user_id,
             :datetimeperformed, presence: true
 
   validates :hours, numericality: { only_integer: true,

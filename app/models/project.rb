@@ -4,7 +4,7 @@ class Project < ActiveRecord::Base
   has_many :users, through: :works
 
   validates :name, presence: true, length: { minimum: 5 }
-  validates :company, presence: true
+  validates :company_id, presence: true
   validates :default_rate, numericality: { only_integer: true,
                                            greater_than: 50 }
   validates :slug, uniqueness: true, presence: true
