@@ -1,6 +1,7 @@
 
 <h1><%= @company.name %></h1>
 
+<% if @company.projects.size > 0%>
 <table>
   <tbody>
   <tr>
@@ -10,6 +11,9 @@
   <%= render partial: "projects/project", collection: @company.projects%>
   </tbody>
 </table>
+<% else %>
+<p>No projects</p>
+ <% end %>
 
 <% content_for :aside do %>
     <% render 'sidebar' %>

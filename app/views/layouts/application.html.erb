@@ -17,6 +17,9 @@
     </nav>
   </header>
   <section id="main">
+    <% if flash[:notice] %>
+    <div class="flash notice"><%= flash[:notice]%></div>
+    <% end  %>
     <article>
       <%= yield %>
     </article>
